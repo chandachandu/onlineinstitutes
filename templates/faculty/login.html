@@ -1,0 +1,36 @@
+{% extends "common.html" %}
+{% load static %}
+{% block pages %}
+    <form action="{% url "validate" %}" method="post">
+    {% csrf_token %}
+<div class="row bg-light  faculty-login-bg">
+    <div class="col-md-12"><h3>Faculty Login</h3></div>
+<div class="col-md-2 bg-info border border-light  p-4 text-center" >
+    <img src="{% static "images/lock.png" %}" class="img-fluid" style="width: 100px;">
+</div>
+
+<div class="col-md-4 bg-danger border border-light p-4 ">
+    <div class="form-group">
+        <label for="inputPassword" >Email Id</label>
+              <input type="email" class="form-control" name="email" id="inputemail" required>
+
+    </div>
+</div>
+
+<div class="col-md-4 bg-success border border-light p-4 ">
+    <div class="form-group">
+        <label for="inputPassword" >Password</label>
+              <input type="password" class="form-control" name="password" id="inputPassword" required>
+
+    </div>
+</div>
+
+ <div class="col-md-2 bg-warning border border-light btn-group-vertical ">
+     <input type="submit" name="submit" class="btn m-auto btn-outline-none" >
+</div>
+
+
+</div>
+    </form>
+
+{% endblock %}

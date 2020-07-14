@@ -1,0 +1,11 @@
+{% extends "common.html" %}
+{% load static %}
+{% block pages %}
+    {%  include "faculty/menu.html" %}
+<div class="row">
+{{ request.session.faculty }}
+
+</div>
+
+
+{% endblock %}

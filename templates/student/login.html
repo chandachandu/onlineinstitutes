@@ -1,0 +1,38 @@
+{% extends "common.html" %}
+{% load static %}
+{% block pages %}
+<div class="row bg-light">
+<div class="col-md-6 col-lg-5 py-3 text-center">
+    <img src="{% static "images/student.png" %}" class="img-fluid">
+{#        <div class="bg-danger text-light col-md-12 py-2"><h3 class="m-auto">Faculty Login</h3></div>#}
+
+</div>
+<div class="col-md-6 col-lg-5  py-4 m-auto">
+
+             <form action="#" method="post" autocomplete="off" class="m-auto border shadow p-4 " style="max-width: 400px">
+                       {% csrf_token %}
+                     <h4>Student Login</h4>
+
+  <div class="form-group ">
+    <label for="staticEmail">Email</label>
+    <div class="col-sm-12">
+      <input type="email"  class="form-control" id="staticEmail"  required >
+    </div>
+  </div>
+  <div class="form-group ">
+    <label for="inputPassword" >Password</label>
+    <div class="col-sm-12">
+      <input type="password" class="form-control" id="inputPassword" required>
+    </div>
+  </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-danger px-5 text-left">
+    </div>
+     </form>
+
+</div>
+
+</div>
+
+
+{% endblock %}

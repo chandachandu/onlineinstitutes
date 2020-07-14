@@ -1,0 +1,25 @@
+{% extends "common.html" %}
+{% block pages %}
+{% include "admin/adminmenu.html" %}
+<div class="row bg-light p-lg-4">
+    <div class="col-md-5 m-auto border shadow p-3 my-3" style="border-top: 5px solid gold">
+        <form action="{% url "schedule" %}" method="post">
+            {{ form.as_p }}
+            <div class="form-group">
+                <input type="submit" name="addclass" class="btn btn-info">
+            </div>
+        </form>
+    </div>
+</div>
+    {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-warning alert-dismissible fade show alert-messages" role="alert">
+  <strong> {{ message }}</strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+    {% endfor %}
+{% endif %}
+{% endblock %}
+

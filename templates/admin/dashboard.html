@@ -1,0 +1,29 @@
+{% extends "common.html" %}
+
+{% block pages %}
+    {% include "admin/adminmenu.html" %}
+    <div class="row p-lg-4 bg-light">
+      <h3 class="col-md-12 text-info mb-3">
+          Welcome Mr.{{ data.name }}
+      </h3>
+        <div class="col-md-12 m-auto d-flex justify-content-center">
+        <table class="table table-responsive-sm table-striped text-center" style="max-width: 500px">
+            <tbody>
+            <tr>
+                <th>NAME</th>
+                <th>{{ data.name }}</th>
+            </tr>
+            <tr>
+                <th>Email Id</th>
+                <th>{{ data.email }}</th>
+            </tr>
+             <tr>
+                <th>Phone Number</th>
+                <th>{{ data.contact_no }}</th>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>
+
+{% endblock %}
